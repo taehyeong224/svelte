@@ -8,7 +8,7 @@
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>kth {name}!</h1>
 	<input bind:value={name}/>
 	{#if name === '42'}
 		<p>what was the question?</p>
