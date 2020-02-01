@@ -63,7 +63,7 @@
 </script>
 
 <Header/>
-<main>
+<main id="page">
     <button on:click={showAddHackathonModal}>모집하기</button>
     <h1>현재 진행 중인 해커톤</h1>
     <ul>
@@ -74,6 +74,14 @@
     </ul>
     <Modal isFade={isFade} id={"modal"} target={modal} closeFunction={closeModal}/>
     <AddHackathonModal isFade={isAddHackathonModalFade} id={"modal"} title={modal.title} body={modal.body} closeFunction={closeAddHackathonModal}/>
+
+    <div class="footer-menu footer-menu-center-icon footer-5-icons">
+        <a><i class="fa fa-gift"></i><span>Features</span></a>
+        <a href="#" class="active-nav"><i class="fa fa-home"></i><span>Home</span></a>
+        <a data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
+        <a href="#" data-menu="menu-navigation"><i class="fa fa-bars"></i><span>Menu</span></a>
+        <div class="clear"></div>
+    </div>
 </main>
 
 <style>
