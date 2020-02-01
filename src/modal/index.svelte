@@ -1,6 +1,5 @@
 <script>
     export let isFade;
-    $: console.log(`the isFade is ${isFade}`);
     export let id;
     export let title;
     export let body;
