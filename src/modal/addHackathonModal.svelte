@@ -1,17 +1,21 @@
 <script>
+    import {hackathons} from '../store'
+
     export let isFade;
     export let id;
     export let title;
     export let body;
-    export let ok;
+    export let total = 10;
+
     export let closeFunction;
-    export let okFunction;
     export const close = () => {
         closeFunction();
     };
     export const confirm = () => {
-        okFunction();
-    }
+        addHackathons();
+        closeFunction();
+    };
+    const addHackathons = () => hackathons.add({title, body, total})
 </script>
 
 <!-- Modal -->
@@ -20,13 +24,17 @@
         <div id={id} class="searchModal">
             <div class="search-modal-content">
                 <div class="page-header">
-                    <h1>{title}</h1>
+                    <label for="title">제목</label>
+                    <input id="title" type="text" bind:value={title}/>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row">
                             <div class="col-sm-12">
-                                <h2>{body}</h2>
+                                <label for="modal-body">내용</label>
+                                <textarea id="modal-body" bind:value={body}></textarea>
+                                <label for="modal-total">모집 팀 수</label>
+                                <input id="modal-total" type="number" bind:value={total}/>
                             </div>
                         </div>
                     </div>
@@ -36,7 +44,8 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" on:click={close}>닫기
                     </button>
                     <button type="button" class="btn btn-primary"
-                            on:click={confirm}>{ok}</button>
+                            on:click={confirm}>모집하기
+                    </button>
                 </div>
             </div>
         </div>
