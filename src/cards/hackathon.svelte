@@ -1,6 +1,6 @@
 <script>
     import {convertToFormat} from "../util"
-    import { hackathons } from '../store'
+    import {hackathons} from '../store'
 
     export let hackathon;
     export let id;
@@ -44,7 +44,8 @@
         </div>
 
         <div class="caption-bottom left-20 bottom-20">
-            <p class="color-white opacity-70 bottom-0 font-12">현재 참가 팀 {hackathon.currentTeamCount} / {hackathon.total}</p>
+            <p class="color-white opacity-70 bottom-0 font-12">현재 참가 팀 {hackathon.currentTeamCount}
+                / {hackathon.total}</p>
             <h1 class="color-white bolder font-32">{hackathon.title}</h1>
         </div>
         <div class="caption-overlay bg-black opacity-70"></div>
@@ -74,7 +75,7 @@
         <div class="close-menu button button-full button-m round-small shadow-huge bg-green1-dark"
              on:click={confirm(hackathon.id)}>참가합니다
         </div>
-        <div class="close-menu button button-full button-m round-small shadow-huge bg-red1-dark" on:click={close}>
+        <div class="close-menu button button-full button-m round-small shadow-huge bg-red1-dark">
             취소
         </div>
     </div>
