@@ -53,30 +53,3 @@
     </div>
 </div>
 
-<div id={id}
-     class="menu-box round-medium"
-     data-menu-type="menu-box-modal"
-     data-menu-height="340"
-     data-menu-width="300">
-    <div class="page-title has-subtitle">
-        <div class="page-title-left">
-            <a href="#">{hackathon.title}</a>
-            <span class="color-highlight">현재 참가한 팀 {hackathon.currentTeamCount} / {hackathon.total}</span>
-        </div>
-        <div class="page-title-right">
-            <a href="#" class="close-menu"><i class="fa fa-times-circle font-20 color-red2-dark"></i></a>
-        </div>
-    </div>
-
-    <div class="content bottom-0">
-        <pre>
-            {hackathon.body}
-        </pre>
-        <div class="close-menu button button-full button-m round-small shadow-huge bg-green1-dark"
-             on:click={confirm(hackathon.id)}>참가합니다
-        </div>
-        <div class="close-menu button button-full button-m round-small shadow-huge bg-red1-dark">
-            취소
-        </div>
-    </div>
-</div>
