@@ -8,7 +8,7 @@ const _hackathons = [
     title: '2/2 합시다',
     body: "블라블라블라블라블라블라블라블라블라블라",
     total: 10,
-    currentMemberCount: 1,
+    currentTeamCount: 1,
     createdAt: getCurrentTimestamp(),
     updatedAt: getCurrentTimestamp(),
   },
@@ -17,7 +17,7 @@ const _hackathons = [
     title: '다음달 하실 분들',
     body: "블라블라블라블라블라블라블라블라",
     total: 10,
-    currentMemberCount: 1,
+    currentTeamCount: 1,
     createdAt: getCurrentTimestamp(),
     updatedAt: getCurrentTimestamp()
   },
@@ -26,7 +26,7 @@ const _hackathons = [
     title: '모이자',
     body: "블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라블라",
     total: 10,
-    currentMemberCount: 1,
+    currentTeamCount: 1,
     createdAt: getCurrentTimestamp(),
     updatedAt: getCurrentTimestamp()
   }];
@@ -41,7 +41,7 @@ const createHackathons = () => {
       title,
       body,
       total: Number(total),
-      currentMemberCount: 1,
+      currentTeamCount: 1,
       createdAt: getCurrentTimestamp(),
       updatedAt: getCurrentTimestamp()
     }))

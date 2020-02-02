@@ -7,6 +7,7 @@
 <style>
 </style>
 
-<home>
-    <img src="images/favicon-32x32.png" alt="background image" on:click={goToHome}/>
-</home>
+<div class="header header-fixed header-logo-app">
+    <a href="#" class="header-title" on:click={goToHome}>online hackathon</a>
+    <a href="#" class="header-icon header-icon-2" data-toggle-theme><i class="fa fa-moon"></i></a>
+</div>
