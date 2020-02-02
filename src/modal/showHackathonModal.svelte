@@ -11,19 +11,19 @@
         closeFunction();
     };
     export const confirm = (id) => {
-        addCurrentMemberCount(id);
+        addCurrentTeamCount(id);
         closeFunction();
     };
 
-    const addCurrentMemberCount = (id) => {
+    const addCurrentTeamCount = (id) => {
         const target = hackathons.getOne(id);
         if (!target) {
             throw Error(`${id} not found`);
         }
-        target.currentMemberCount += 1;
-        if (target.total < target.currentMemberCount) {
+        target.currentTeamCount += 1;
+        if (target.total < target.currentTeamCount) {
             alert('현재 참가한 팀이 꽉 찼습니다.');
-            console.error(`${id}'s ${target.total} < ${target.currentMemberCount}`);
+            console.error(`${id}'s ${target.total} < ${target.currentTeamCount}`);
             return;
         }
         hackathons.update(target);
